@@ -1,0 +1,25 @@
+{
+  "name": "pf03_a1",
+  "version": "1.0.0",
+  "description": "Test-driven development project",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "module",
+    "url": "git+https://github.com/Yaizagb/PF03_A1.git"
+  },
+  "author": "Yaiza García Bravo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yaizagb/PF03_A1/issues"
+  },
+  "homepage": "https://github.com/Yaizagb/PF03_A1#readme",
+  "dependencies": {
+    "chalk": "^6.0.1"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.5"
+  }
+}
