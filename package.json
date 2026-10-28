@@ -4,7 +4,7 @@
   "description": "Test-driven development project",
   "main": "index.js",
   "scripts": {
-    "test": "node --test"
+    "test": "vitest run"
   },
   "repository": {
     "type": "module",
