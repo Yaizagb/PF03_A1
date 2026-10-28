@@ -27,7 +27,7 @@ it("debe rechazar los números decimales", () => {
         expect(() => fibonacci(2.5)).toThrow(RangeError('solo números enteros >= 0'));
     });
 });
-//console.log(chalk.green("Tests de Fibonacci preparados"));
+console.log(chalk.green("Tests de Fibonacci preparados"));
 
 //factorial del numero n
 //n <= 0 excepción RangeError("solo números enteros >= 0")
