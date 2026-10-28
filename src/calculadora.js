@@ -1,8 +1,25 @@
 function fibonacci(n){
- throw new console.error("No implementado");
+
+ if (!Number.isInteger(n) || n < 0) {
+    throw new RangeError('solo números enteros >= 0');
+}
+ if (n === 0) {
+        return 0;
+    }
+
+ if(n === 1){
+    return 1;
+ }
+
+    return fibonacci(n-1) + fibonacci(n-2);
     
 }
 
 function esPinValido(pin){
-    throw new console.error("No implementado");
+    throw new Error("No implementado");
+}
+
+export{
+    fibonacci,
+    esPinValido
 }
