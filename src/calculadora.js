@@ -15,10 +15,6 @@ function fibonacci(n){
     
 }
 
-function esPinValido(pin){
-    throw new Error("No implementado");
-}
-
 export{
     fibonacci,
     esPinValido
