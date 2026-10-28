@@ -29,38 +29,35 @@ it("debe rechazar los números decimales", () => {
 });
 console.log(chalk.green("Tests de Fibonacci preparados"));
 
-describe('Función esPinValido',()=>{
-   it('no puede ser null o undefined', () => {
-        expect(() => esPinValido(null))
-            .toThrow(new Error('No puede ser null o undefined'));
 
-        expect(() => esPinValido(undefined))
-            .toThrow(new Error('No puede ser null o undefined'));
+describe('Función esPinValido', () => {
+    it('no puede ser null o undefined', () => {
+        expect(esPinValido(null)).toBe(false);
+        expect(esPinValido(undefined)).toBe(false);
     });
 
-    it('No puede andar vacío',()=>{
-        expect(esPinValido('').toThrow(new Error('No puede estar vacío')));
+    it('no puede estar vacío', () => {
+        expect(esPinValido('')).toBe(false);
     });
+
     it('debe tener una longitud de 4 o 6 dígitos', () => {
         expect(esPinValido('1234')).toBe(true);
         expect(esPinValido('123456')).toBe(true);
 
-        expect(() => esPinValido('123'))
-            .toBe(false);
-        expect(() => esPinValido('12345'))
-            .toBe(false);
-        expect(() => esPinValido('1234567'))
-            .toBe(false);
+        expect(esPinValido('123')).toBe(false);
+        expect(esPinValido('12345')).toBe(false);
+        expect(esPinValido('1234567')).toBe(false);
     });
+
     it('solo puede contener dígitos del 0 al 9', () => {
-        expect(() => esPinValido('12a4')).toBe(false);
-        expect(() => esPinValido('12 4')).toBe(false);
-        expect(() => esPinValido('12-4')).toBe(false);
+        expect(esPinValido('12a4')).toBe(false);
+        expect(esPinValido('12 4')).toBe(false);
+        expect(esPinValido('12-4')).toBe(false);
     });
 
     it('no puede tener todos los dígitos iguales', () => {
-        expect(() => esPinValido('1111')).toBe(false);
-        expect(() => esPinValido('888888')).toBe(false);
-        expect(() => esPinValido('33333')).toBe(false);
+        expect(esPinValido('1111')).toBe(false);
+        expect(esPinValido('888888')).toBe(false);
+        expect(esPinValido('33333')).toBe(false);
     });
 });
