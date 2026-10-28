@@ -14,19 +14,20 @@ it('debe devolver 1 cuando n es 2',()=>{
     expect(fibonacci(2)).toBe(1);
 });
 it('debe devolver 2 cuando n es 3',()=>{
-    expect(fibonacci(3)).toBe(3);
+    expect(fibonacci(3)).toBe(2);
 });
 it('debe devolver 8 cuando n es 6',()=>{
     expect(fibonacci(6)).toBe(8);
 });
-it('debe lanzar RangeError para un número negativo',()=>{
-    expect(() => fibonacci(-1)).toThrow(RangeError('solo números enteros > 0'));
-});
+it('debe lanzar RangeError para un número negativo', () => {
+    expect(() => fibonacci(-1)).toThrow(
+        new RangeError('solo números enteros >= 0'));
+ });
 it("debe rechazar los números decimales", () => {
-        expect(() => fibonacci(2.5)).toThrow(RangeError('solo enteros'));
+        expect(() => fibonacci(2.5)).toThrow(RangeError('solo números enteros >= 0'));
     });
 });
-console.log(chalk.green("Tests de Fibonacci preparados"));
+//console.log(chalk.green("Tests de Fibonacci preparados"));
 
 //factorial del numero n
 //n <= 0 excepción RangeError("solo números enteros >= 0")
